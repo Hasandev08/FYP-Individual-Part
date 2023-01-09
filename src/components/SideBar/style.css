@@ -1,0 +1,17 @@
+.sidebar {
+  background-color: #f0f6f9;
+  height: 100%;
+  width: 12rem;
+}
+.menu-heading {
+  color: #b6bbc3;
+  font-size: 14px;
+}
+.title {
+  color: #a9aeb6;
+  font-size: 14px;
+}
+.other-heading {
+  color: #b6bbc3;
+  font-size: 14px;
+}
