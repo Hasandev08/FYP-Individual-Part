@@ -1,11 +1,11 @@
 import React from 'react'
 
-import EnhancedTable from '../../components/Table'
+import Table from '../../components/Table'
 
 function Orders() {
   return (
     <div>
-      <EnhancedTable />
+      <Table />
     </div>
   )
 }

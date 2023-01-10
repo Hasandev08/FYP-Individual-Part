@@ -16,6 +16,8 @@
 .navbar {
   width: 100%;
   background-color: #f0f6f9;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 600px) {
   .navbar {
