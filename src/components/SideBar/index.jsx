@@ -1,30 +1,123 @@
-import React from 'react'
+import * as React from 'react'
+import PropTypes from 'prop-types'
+
+import Box from '@mui/material/Box'
+import CssBaseline from '@mui/material/CssBaseline'
+import Drawer from '@mui/material/Drawer'
+import IconButton from '@mui/material/IconButton'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import MenuIcon from '@mui/icons-material/Menu'
+
+import Orders from '../../screens/Orders'
 
 import { menuData, otherData } from '../../config/sideBarData'
 
 import './style.css'
 
-function Sidebar(props) {
-  return (
+const drawerWidth = 220
+
+function ResponsiveDrawer(props) {
+  const { window } = props
+  const [mobileOpen, setMobileOpen] = React.useState(false)
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen)
+  }
+
+  const drawer = (
     <div className='sidebar'>
-      <div className='menu d-flex flex-column'>
-        <p className='menu-heading mt-4'>Menu</p>
-        {menuData.map((item, index) => (
-          <div key={index.toString()}>
-            <p className='title'>{item.title}</p>
-          </div>
+      <List>
+        <div className='sidebar-heading'>
+          <p>Menu</p>
+        </div>
+        {menuData.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText className='title' primary={item.title} />
+            </ListItemButton>
+          </ListItem>
         ))}
-      </div>
-      <div className='others d-flex flex-column mt-4'>
-        <p className='other-heading'>Others</p>
-        {otherData.map((item, index) => (
-          <div key={index.toString()}>
-            <p className='title'>{item.title}</p>
-          </div>
+      </List>
+      <List>
+        <div className='sidebar-heading'>
+          <p>Others</p>
+        </div>
+        {otherData.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText className='title' primary={item.title} />
+            </ListItemButton>
+          </ListItem>
         ))}
-      </div>
+      </List>
     </div>
+  )
+
+  const container = window !== undefined ? () => window().document.body : undefined
+
+  return (
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <div className='navbar'>
+        <IconButton
+          color='black'
+          aria-label='open drawer'
+          edge='start'
+          onClick={handleDrawerToggle}
+          sx={{ mr: 2, ml: 1, display: { sm: 'none' } }}
+        >
+          <MenuIcon />
+        </IconButton>
+      </div>
+      <Box
+        component='nav'
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        aria-label='mailbox folders'
+      >
+        <Drawer
+          container={container}
+          variant='temporary'
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+        <Drawer
+          variant='permanent'
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+          open
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+      <Box
+        component='main'
+        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+      >
+        <Orders />
+      </Box>
+    </Box>
   )
 }
 
-export default Sidebar
+ResponsiveDrawer.propTypes = {
+  window: PropTypes.func,
+}
+
+export default ResponsiveDrawer

@@ -1,17 +1,24 @@
 .sidebar {
   background-color: #f0f6f9;
-  height: 100%;
-  width: 12rem;
+  height: 200%;
 }
-.menu-heading {
+.sidebar-heading {
   color: #b6bbc3;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 20px 0px 0px 20px;
+}
+.sidebar-heading p {
+  margin-bottom: 10px;
 }
 .title {
   color: #a9aeb6;
-  font-size: 14px;
 }
-.other-heading {
-  color: #b6bbc3;
-  font-size: 14px;
+.navbar {
+  width: 100%;
+  background-color: #f0f6f9;
+}
+@media screen and (min-width: 600px) {
+  .navbar {
+    display: none !important;
+  }
 }
