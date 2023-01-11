@@ -1,4 +1,5 @@
-import Sidebar from './components/SideBar'
+import Sidebar from './components/SideBar/index'
+
 import './App.css'
 
 function App() {

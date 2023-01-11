@@ -29,10 +29,15 @@ function stableSort(array, comparator) {
   return stabilizedThis.map((el) => el[0])
 }
 
-function Table(props) {
+function Table({ headCells, filterTableData }) {
   return (
     <div>
-      <EnhancedTable stableSort={stableSort} getComparator={getComparator} />
+      <EnhancedTable
+        filterTableData={filterTableData}
+        getComparator={getComparator}
+        headCells={headCells}
+        stableSort={stableSort}
+      />
     </div>
   )
 }

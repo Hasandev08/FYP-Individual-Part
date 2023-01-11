@@ -7,7 +7,7 @@ function createData(customer, address, date, status) {
   }
 }
 
-export const rows = [
+export const tableData = [
   createData('Hasan', 'Sialkot', '1/11/2023', 'Completed'),
   createData('Ali Hassan', 'Sargodha', '1/11/2023', 'Preparing'),
   createData('Asad', 'Lahore', '1/11/2023', 'Completed'),

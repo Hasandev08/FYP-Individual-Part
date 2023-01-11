@@ -11,21 +11,26 @@ export const menuData = [
   {
     title: 'Dashboard',
     icon: <DashboardOutlinedIcon />,
+    path: 'dashboard',
   },
   {
     title: 'Return',
+    path: 'return',
   },
   {
     title: 'Order',
     icon: <ShoppingCartOutlinedIcon />,
+    path: 'orders',
   },
   {
     title: 'Review',
     icon: <GroupTwoToneIcon />,
+    path: 'review',
   },
   {
     title: 'Payment',
     icon: <CalendarMonthTwoToneIcon />,
+    path: 'payment',
   },
 ]
 
@@ -33,14 +38,17 @@ export const otherData = [
   {
     title: 'Account',
     icon: <PersonOutlineTwoToneIcon />,
+    path: 'account',
   },
   {
     title: 'Store Settings',
     icon: <SettingsTwoToneIcon />,
+    path: 'setting',
   },
   {
     title: 'Help Center',
     icon: <ReportRoundedIcon />,
+    path: 'help',
   },
   {
     title: 'Log Out',

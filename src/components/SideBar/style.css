@@ -10,14 +10,17 @@
 .sidebar-heading p {
   margin-bottom: 10px;
 }
+.sidebar-buttons {
+  background-color: black !important;
+}
 .title {
   color: #a9aeb6;
 }
 .navbar {
-  width: 100%;
   background-color: #f0f6f9;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 @media screen and (min-width: 600px) {
   .navbar {

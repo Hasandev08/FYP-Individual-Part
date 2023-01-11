@@ -4,11 +4,9 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import TableSortLabel from '@mui/material/TableSortLabel'
 
-import { headCells } from '../../../config/tableData'
-
 import './style.css'
 
-export default function EnhancedTableHead({ order, orderBy, onRequestSort }) {
+export default function EnhancedTableHead({ headCells, order, orderBy, onRequestSort }) {
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property)
   }
@@ -17,7 +15,7 @@ export default function EnhancedTableHead({ order, orderBy, onRequestSort }) {
     <TableHead>
       <TableRow>
         {headCells.map((headCell) => (
-          <TableCell key={headCell.id} align='center'>
+          <TableCell key={headCell.id} align='left'>
             <TableSortLabel
               active={orderBy === headCell.id}
               direction={orderBy === headCell.id ? order : 'asc'}

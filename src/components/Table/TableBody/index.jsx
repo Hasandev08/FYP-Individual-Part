@@ -9,11 +9,9 @@ import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
 import TableRow from '@mui/material/TableRow'
 
-import { rows } from '../../../config/tableData'
-
 import './style.css'
 
-export default function EnhancedTable({ stableSort, getComparator }) {
+export default function EnhancedTable({ filterTableData, getComparator, headCells, stableSort }) {
   const [order, setOrder] = React.useState('asc')
   const [orderBy, setOrderBy] = React.useState('calories')
   const [selected, setSelected] = React.useState([])
@@ -28,7 +26,7 @@ export default function EnhancedTable({ stableSort, getComparator }) {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n) => n.name)
+      const newSelected = filterTableData.map((n) => n.name)
       setSelected(newSelected)
       return
     }
@@ -45,31 +43,38 @@ export default function EnhancedTable({ stableSort, getComparator }) {
   }
 
   return (
-    <div className='table d-flex flex-column align-items-center'>
+    <div className='d-flex flex-column align-items-center'>
       <div>
         <TableContainer>
           <Table
-            sx={{ width: { xs: 250, sm: 400, md: 550, lg: 900, xl: 1200 } }}
+            sx={{ width: { xs: 200, sm: 350, md: 700, lg: 950, xl: 1200 } }}
             aria-labelledby='tableTitle'
           >
             <EnhancedTableHead
+              headCells={headCells}
               numSelected={selected.length}
               order={order}
               orderBy={orderBy}
               onSelectAllClick={handleSelectAllClick}
               onRequestSort={handleRequestSort}
-              rowCount={rows.length}
+              rowCount={filterTableData.length}
             />
             <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
+              {stableSort(filterTableData, getComparator(order, orderBy))
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
                   return (
                     <TableRow hover>
-                      <TableCell align='center'>{row.customer}</TableCell>
-                      <TableCell align='center'>{row.address}</TableCell>
-                      <TableCell align='center'>{row.date}</TableCell>
-                      <TableCell align='center'>
+                      <TableCell align='left' style={{ width: 200 }}>
+                        {row.customer}
+                      </TableCell>
+                      <TableCell align='left' style={{ width: 200 }}>
+                        {row.address}
+                      </TableCell>
+                      <TableCell align='left' style={{ width: 200 }}>
+                        {row.date}
+                      </TableCell>
+                      <TableCell align='left' style={{ width: 100 }}>
                         <p
                           className={
                             row.status === 'Completed' ? 'status-complete' : 'status-preparing'
@@ -87,11 +92,11 @@ export default function EnhancedTable({ stableSort, getComparator }) {
       </div>
       <div>
         <Pagination
-          rows={rows}
-          rowsPerPage={rowsPerPage}
-          page={page}
+          filterTableData={filterTableData}
           handleChangePage={handleChangePage}
           handleChangeRowsPerPage={handleChangeRowsPerPage}
+          page={page}
+          rowsPerPage={rowsPerPage}
         />
       </div>
     </div>

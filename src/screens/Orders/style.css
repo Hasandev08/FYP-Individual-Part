@@ -1,0 +1,24 @@
+.title-row {
+  border-bottom: 1px solid #dcd8d8;
+  padding-bottom: 1.5rem;
+}
+.title-heading {
+  font-weight: bold;
+}
+.balance-text {
+  color: #808080;
+  font-size: 12px;
+  margin: 0px !important;
+}
+.order-icon {
+  margin-right: 10px;
+}
+.orders-subtotal {
+  font-size: 16px;
+  margin: 0px;
+}
+.order-subheading {
+  color: #808080;
+  font-size: 12px;
+  margin: 0px;
+}

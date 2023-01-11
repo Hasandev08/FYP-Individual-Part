@@ -1,5 +1,8 @@
-import * as React from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
+
+import DashBoard from '../../screens/DashBoard'
+import Orders from '../../screens/Orders'
 
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -12,17 +15,15 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import MenuIcon from '@mui/icons-material/Menu'
 
-import Orders from '../../screens/Orders'
-
 import { menuData, otherData } from '../../config/sideBarData'
 
 import './style.css'
 
 const drawerWidth = 220
 
-function ResponsiveDrawer(props) {
-  const { window } = props
-  const [mobileOpen, setMobileOpen] = React.useState(false)
+function Sidebar({ window }) {
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [currentPage, setCurrentPage] = useState('orders')
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
@@ -36,7 +37,7 @@ function ResponsiveDrawer(props) {
         </div>
         {menuData.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => setCurrentPage(item.path)}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText className='title' primary={item.title} />
             </ListItemButton>
@@ -49,7 +50,7 @@ function ResponsiveDrawer(props) {
         </div>
         {otherData.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => setCurrentPage(item.path)}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText className='title' primary={item.title} />
             </ListItemButton>
@@ -106,18 +107,16 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box
-        component='main'
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-      >
-        <Orders />
+      <Box component='main' sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
+        {currentPage === 'orders' && <Orders />}
+        {currentPage === 'dashboard' && <DashBoard />}
       </Box>
     </Box>
   )
 }
 
-ResponsiveDrawer.propTypes = {
+Sidebar.propTypes = {
   window: PropTypes.func,
 }
 
-export default ResponsiveDrawer
+export default Sidebar
