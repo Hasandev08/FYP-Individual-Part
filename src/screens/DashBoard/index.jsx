@@ -1,9 +1,11 @@
 import React from 'react'
 
+import SearchBar from '../../components/common/SearchBar'
+
 function DashBoard() {
   return (
     <div>
-      <h1>Dashboard</h1>
+      <SearchBar />
     </div>
   )
 }

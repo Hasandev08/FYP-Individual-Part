@@ -18,9 +18,7 @@
 }
 .navbar {
   background-color: #f0f6f9;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  padding-bottom: 200%;
 }
 @media screen and (min-width: 600px) {
   .navbar {

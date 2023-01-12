@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import SearchBar from '../../components/SearchBar'
+import SearchBar from '../../components/common/SearchBar'
 import Table from '../../components/Table'
 
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'

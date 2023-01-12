@@ -23,7 +23,7 @@ const drawerWidth = 220
 
 function Sidebar({ window }) {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [currentPage, setCurrentPage] = useState('orders')
+  const [currentPage, setCurrentPage] = useState('dashboard')
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
