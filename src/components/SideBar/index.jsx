@@ -108,8 +108,10 @@ function Sidebar({ window }) {
         </Drawer>
       </Box>
       <Box component='main' sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
-        {currentPage === 'orders' && <Orders />}
-        {currentPage === 'dashboard' && <DashBoard />}
+        <div className='screens'>
+          {currentPage === 'orders' && <Orders />}
+          {currentPage === 'dashboard' && <DashBoard />}
+        </div>
       </Box>
     </Box>
   )

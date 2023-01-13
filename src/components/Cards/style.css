@@ -1,0 +1,62 @@
+.first-card {
+  background-color: #0095ff;
+  border-radius: 20px;
+  height: 6rem;
+  margin-top: 1rem;
+  width: 13rem !important;
+}
+.second-card {
+  background-color: #01c282;
+  border-radius: 20px;
+  height: 6rem;
+  margin-top: 1rem;
+  width: 13rem !important;
+}
+.third-card {
+  background-color: #884dff;
+  border-radius: 20px;
+  height: 6rem;
+  margin-top: 1rem;
+  width: 13rem !important;
+}
+.fourth-card {
+  background-color: #ff708d;
+  border-radius: 20px;
+  height: 6rem;
+  margin-top: 1rem;
+  width: 13rem !important;
+}
+.first-card-icon {
+  background-color: #26a5ff;
+  border-radius: 25px;
+  margin: 0 1.5rem 1rem 1rem;
+  padding: 12px;
+}
+.second-card-icon {
+  background-color: #27cb95;
+  border-radius: 25px;
+  margin: 0 1.5rem 1rem 1rem;
+  padding: 12px;
+}
+.third-card-icon {
+  background-color: #9a68ff;
+  border-radius: 25px;
+  margin: 0 1.5rem 1rem 1rem;
+  padding: 12px;
+}
+.fourth-card-icon {
+  background-color: #ff859e;
+  border-radius: 25px;
+  margin: 0 1.5rem 1rem 1rem;
+  padding: 12px;
+}
+.profit {
+  color: white;
+  font-size: 10px;
+  margin: 0px;
+}
+.money {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}

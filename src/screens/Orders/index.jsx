@@ -53,7 +53,7 @@ function Orders() {
           </div>
           <div className='delivery-stats d-flex flex-column'>
             <p className='orders-subtotal'>12</p>
-            <p className='order-subheading'>Food Delivered</p>
+            <p className='order-subheading'>Delivered</p>
           </div>
         </div>
         <div className='ratings d-flex flex-wrap'>

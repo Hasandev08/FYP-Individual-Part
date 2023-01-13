@@ -1,3 +1,41 @@
+export const weekData = [
+  {
+    id: 1,
+    name: 'Monday',
+    sale: 57,
+  },
+  {
+    id: 2,
+    name: 'Tuesday',
+    sale: 35,
+  },
+  {
+    id: 3,
+    name: 'Wednesday',
+    sale: 45,
+  },
+  {
+    id: 4,
+    name: 'Thursday',
+    sale: 67,
+  },
+  {
+    id: 5,
+    name: 'Friday',
+    sale: 76,
+  },
+  {
+    id: 6,
+    name: 'Saturday',
+    sale: 84,
+  },
+  {
+    id: 7,
+    name: 'Sunday',
+    sale: 25,
+  },
+]
+
 export const countries = [
   {
     name: 'Lahore',
@@ -46,5 +84,29 @@ export const products = [
     id: 5,
     name: 'Shorts',
     sale: 41,
+  },
+]
+
+export const revenueTableHeader = [
+  {
+    title: '#',
+  },
+  {
+    title: 'Days',
+  },
+  {
+    title: 'Sales',
+  },
+]
+
+export const productsTableHeader = [
+  {
+    title: '#',
+  },
+  {
+    title: 'Name',
+  },
+  {
+    title: 'Sales',
   },
 ]

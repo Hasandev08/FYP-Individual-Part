@@ -1,0 +1,14 @@
+.times {
+  margin-left: 1.5rem;
+}
+.time-button {
+  background-color: #0095ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  padding: 5px 15px;
+}
+.time-button:hover {
+  background-color: #0360a3;
+}

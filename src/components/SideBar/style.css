@@ -18,7 +18,10 @@
 }
 .navbar {
   background-color: #f0f6f9;
-  padding-bottom: 200%;
+  padding-bottom: 200% !important;
+}
+.screens {
+  background-color: #fdfdfd;
 }
 @media screen and (min-width: 600px) {
   .navbar {
