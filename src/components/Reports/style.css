@@ -8,49 +8,15 @@
   height: 32rem !important;
   padding: 0px 0px 2rem !important;
 }
-.weekly-revenue p {
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0px;
-  padding: 1.5rem 1rem 0;
-}
-.table thead tr th {
-  color: #808080;
-  font-size: 12px;
-  font-weight: normal;
-  padding: 1rem;
-}
-.table tbody tr th {
-  font-size: 12px;
-  font-weight: normal;
-  padding: 1rem;
-}
-.table tbody tr td {
-  font-size: 12px;
-  font-weight: normal;
-  padding: 1rem;
-}
 .top-products {
   background-color: #ffffff;
   border-radius: 35px;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
   padding: 0px 0px 2rem !important;
 }
-.top-products p {
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0px;
-  padding: 1.5rem 1rem 0;
-}
 .top-countries {
   background-color: #ffffff;
   border-radius: 35px;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
   padding: 0px 0px 2rem !important;
-}
-.top-countries p {
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0px;
-  padding: 1.5rem 1rem 0;
 }

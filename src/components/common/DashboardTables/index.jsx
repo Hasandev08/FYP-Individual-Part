@@ -1,9 +1,11 @@
 import React from 'react'
 
+import './style.css'
+
 function DashboardTables({ header, tableHeader, data, check }) {
   return (
     <div>
-      <p>{header}</p>
+      <p className='header'>{header}</p>
       <div className='data'>
         <table className='table'>
           <thead>
@@ -22,7 +24,7 @@ function DashboardTables({ header, tableHeader, data, check }) {
               <tr key={index.toString()}>
                 {check && <th scope='row'>{item.id}</th>}
                 <td>{item.name}</td>
-                <td>{item.sale}</td>
+                <td>$ {item.sale}</td>
               </tr>
             ))}
           </tbody>

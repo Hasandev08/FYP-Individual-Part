@@ -1,0 +1,22 @@
+.header {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 1.5rem 1rem 0;
+}
+.table thead tr th {
+  color: #808080;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1rem;
+}
+.table tbody tr th {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1rem;
+}
+.table tbody tr td {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1rem;
+}
