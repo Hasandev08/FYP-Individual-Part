@@ -1,10 +1,10 @@
 import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone'
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
-import GroupTwoToneIcon from '@mui/icons-material/GroupTwoTone'
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
-import PersonOutlineTwoToneIcon from '@mui/icons-material/PersonOutlineTwoTone'
-import ReportRoundedIcon from '@mui/icons-material/ReportRounded'
-import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone'
+import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined'
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
+import ReportOutlinedIcon from '@mui/icons-material/ReportOutlined'
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 
 export const menuData = [
@@ -24,7 +24,7 @@ export const menuData = [
   },
   {
     title: 'Review',
-    icon: <GroupTwoToneIcon />,
+    icon: <PeopleOutlinedIcon />,
     path: 'review',
   },
   {
@@ -37,17 +37,17 @@ export const menuData = [
 export const otherData = [
   {
     title: 'Account',
-    icon: <PersonOutlineTwoToneIcon />,
+    icon: <PersonOutlinedIcon />,
     path: 'account',
   },
   {
     title: 'Store Settings',
-    icon: <SettingsTwoToneIcon />,
+    icon: <SettingsOutlinedIcon />,
     path: 'setting',
   },
   {
     title: 'Help Center',
-    icon: <ReportRoundedIcon />,
+    icon: <ReportOutlinedIcon />,
     path: 'help',
   },
   {

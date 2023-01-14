@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import Cards from '../../components/Cards'
 import Reports from '../../components/Reports'
-import SearchBar from '../../components/common/SearchBar'
+// import SearchBar from '../../components/common/SearchBar'
 
 import { countries, products, weekData } from '../../config/dashboardData'
 
@@ -38,7 +38,7 @@ function DashBoard() {
 
   const calcWeekRevenue = () => {
     weekData.forEach((item) => {
-      weeklyRevenue += item.sales
+      weeklyRevenue += item.sale
     })
   }
 
@@ -60,10 +60,10 @@ function DashBoard() {
 
   return (
     <div className='dashboard d-flex flex-column px-5'>
-      <div className='search-dashboard my-4'>
+      {/* <div className='search-dashboard my-4'>
         <SearchBar />
-      </div>
-      <div className='times d-flex mb-2'>
+      </div> */}
+      <div className='times d-flex mt-4 mb-2'>
         <button className='time-button mx-1' onClick={() => setRevenue(57)}>
           Daily
         </button>

@@ -20,7 +20,7 @@ function Orders() {
         item.customer.toLowerCase().includes(val.toLowerCase()) ||
         item.address.toLowerCase().includes(val.toLowerCase()) ||
         item.date.includes(val) ||
-        item.status.includes(val)
+        item.status.toLowerCase().includes(val.toLowerCase())
     )
     setFilterTableData(filteredData)
   }

@@ -10,7 +10,7 @@ function Cards({ revenue }) {
       <div className='row'>
         <div className='first-card col-md-3 col-6 d-flex align-items-center m-3'>
           <div className='first-card-icon'>
-            <ShoppingBagIcon />
+            <ShoppingBagIcon sx={{ color: '#0095ff' }} />
           </div>
           <div className='card-entries d-flex flex-column'>
             <p className='profit'>Total Profit</p>
@@ -19,7 +19,7 @@ function Cards({ revenue }) {
         </div>
         <div className='second-card col-md-3 col-6 d-flex align-items-center m-3'>
           <div className='second-card-icon'>
-            <ShoppingBagIcon />
+            <ShoppingBagIcon sx={{ color: '#01c282' }} />
           </div>
           <div className='card-entries d-flex flex-column'>
             <p className='profit'>Total Cost</p>
@@ -28,7 +28,7 @@ function Cards({ revenue }) {
         </div>
         <div className='third-card col-md-3 col-6 d-flex align-items-center m-3'>
           <div className='third-card-icon'>
-            <ShoppingBagIcon />
+            <ShoppingBagIcon sx={{ color: '#884dff' }} />
           </div>
           <div className='card-entries d-flex flex-column'>
             <p className='profit'>Total Revenue</p>
@@ -37,7 +37,7 @@ function Cards({ revenue }) {
         </div>
         <div className='fourth-card col-md-3 col-6 d-flex align-items-center m-3'>
           <div className='fourth-card-icon'>
-            <ShoppingBagIcon />
+            <ShoppingBagIcon sx={{ color: '#ff708d' }} />
           </div>
           <div className='card-entries d-flex flex-column'>
             <p className='profit'>Total Quantity</p>
