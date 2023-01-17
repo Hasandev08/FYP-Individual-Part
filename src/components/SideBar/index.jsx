@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import DashBoard from '../../screens/DashBoard'
 import Orders from '../../screens/Orders'
+import Products from '../../screens/Products'
 
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -109,8 +110,9 @@ function Sidebar({ window }) {
       </Box>
       <Box component='main' sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
         <div className='screens'>
-          {currentPage === 'orders' && <Orders />}
           {currentPage === 'dashboard' && <DashBoard />}
+          {currentPage === 'orders' && <Orders />}
+          {currentPage === 'products' && <Products />}
         </div>
       </Box>
     </Box>

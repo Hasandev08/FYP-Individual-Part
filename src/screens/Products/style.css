@@ -1,0 +1,14 @@
+.products-search {
+  margin-left: 1.5rem !important;
+}
+.products-report {
+  background-color: #ffffff;
+  border-radius: 35px;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
+  padding: 0px 0px 2rem !important;
+}
+@media screen and (min-width: 600px) and (max-width: 795px) {
+  .products-report {
+    width: 100% !important;
+  }
+}

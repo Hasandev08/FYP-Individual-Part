@@ -11,7 +11,6 @@ function SearchBar({ handleChange }) {
           name='text'
           onChange={(e) => handleChange(e.target.value)}
           placeholder='Search...'
-          type='text'
         />
       </div>
     </div>

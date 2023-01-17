@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DashboardTables from '../common/DashboardTables'
+import ReportTables from '../common/ReportTables'
 
 import { productsTableHeader, revenueTableHeader } from '../../config/dashboardData'
 
@@ -11,25 +11,25 @@ function Reports({ topCountries, topProducts, weekData }) {
     <div className='reports container-fluid'>
       <div className='row'>
         <div className='weekly-revenue col-md-5 col-12 mt-4'>
-          <DashboardTables
+          <ReportTables
             header={'Weekly Revenue'}
             tableHeader={revenueTableHeader}
-            data={weekData}
+            listData={weekData}
             check={true}
           />
         </div>
         <div className='top container-fluid col-md-5 col-12'>
           <div className='row'>
             <div className='top-products mt-4'>
-              <DashboardTables
+              <ReportTables
                 header={'Top Products'}
                 tableHeader={productsTableHeader}
-                data={topProducts}
+                listData={topProducts}
                 check={true}
               />
             </div>
             <div className='top-countries mt-4'>
-              <DashboardTables header={'Top Countries'} data={topCountries} check={false} />
+              <ReportTables header={'Top Countries'} listData={topCountries} check={false} />
             </div>
           </div>
         </div>

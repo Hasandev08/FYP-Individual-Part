@@ -14,6 +14,10 @@ export const menuData = [
     path: 'dashboard',
   },
   {
+    title: 'Products',
+    path: 'products',
+  },
+  {
     title: 'Return',
     path: 'return',
   },
