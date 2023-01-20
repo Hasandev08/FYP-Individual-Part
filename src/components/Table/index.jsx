@@ -31,14 +31,12 @@ function stableSort(array, comparator) {
 
 function Table({ headCells, filterTableData }) {
   return (
-    <div>
-      <EnhancedTable
-        filterTableData={filterTableData}
-        getComparator={getComparator}
-        headCells={headCells}
-        stableSort={stableSort}
-      />
-    </div>
+    <EnhancedTable
+      filterTableData={filterTableData}
+      getComparator={getComparator}
+      headCells={headCells}
+      stableSort={stableSort}
+    />
   )
 }
 

@@ -11,7 +11,7 @@ export const menuData = [
   {
     title: 'Dashboard',
     icon: <DashboardOutlinedIcon />,
-    path: 'dashboard',
+    path: '',
   },
   {
     title: 'Products',

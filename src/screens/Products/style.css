@@ -1,3 +1,6 @@
+.products {
+  width: 100%;
+}
 .products-search {
   margin-left: 1.5rem !important;
 }
@@ -6,6 +9,16 @@
   border-radius: 35px;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
   padding: 0px 0px 2rem !important;
+}
+.add-product-button {
+  background-color: #0095ff;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  height: 2rem;
+  font-size: 12px;
+  margin: 0 0 1rem 2rem !important;
+  width: 3.5rem;
 }
 @media screen and (min-width: 600px) and (max-width: 795px) {
   .products-report {

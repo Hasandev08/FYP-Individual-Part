@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import Cards from '../../components/Cards'
 import Reports from '../../components/Reports'
+import Sidebar from '../../components/SideBar'
 
 import { countries, products, weekData } from '../../config/dashboardData'
 
@@ -56,23 +57,28 @@ function DashBoard() {
   })
 
   return (
-    <div className='dashboard d-flex flex-column px-5'>
-      <div className='times d-flex mt-4 mb-2'>
-        <button className='time-button mx-1' onClick={() => setRevenue(57)}>
-          Daily
-        </button>
-        <button className='time-button mx-1' onClick={() => setRevenue(weeklyRevenue)}>
-          Weekly
-        </button>
-        <button className='time-button mx-1' onClick={() => setRevenue(monthlyRevenue)}>
-          Monthly
-        </button>
+    <div className='screen d-flex'>
+      <div className='common-sidebar'>
+        <Sidebar />
       </div>
-      <div className='dashboard-cards'>
-        <Cards revenue={revenue} />
-      </div>
-      <div className='dashboard-reports'>
-        <Reports topCountries={topCountries} topProducts={topProducts} weekData={weekData} />
+      <div className='dashboard d-flex flex-column px-5'>
+        <div className='times d-flex mt-4 mb-2'>
+          <button className='time-button mx-1' onClick={() => setRevenue(57)}>
+            Daily
+          </button>
+          <button className='time-button mx-1' onClick={() => setRevenue(weeklyRevenue)}>
+            Weekly
+          </button>
+          <button className='time-button mx-1' onClick={() => setRevenue(monthlyRevenue)}>
+            Monthly
+          </button>
+        </div>
+        <div className='dashboard-cards'>
+          <Cards revenue={revenue} />
+        </div>
+        <div className='dashboard-reports'>
+          <Reports topCountries={topCountries} topProducts={topProducts} weekData={weekData} />
+        </div>
       </div>
     </div>
   )

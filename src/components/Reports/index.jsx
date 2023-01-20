@@ -15,7 +15,7 @@ function Reports({ topCountries, topProducts, weekData }) {
             header={'Weekly Revenue'}
             tableHeader={revenueTableHeader}
             listData={weekData}
-            check={true}
+            check
           />
         </div>
         <div className='top container-fluid col-md-5 col-12'>
@@ -25,7 +25,7 @@ function Reports({ topCountries, topProducts, weekData }) {
                 header={'Top Products'}
                 tableHeader={productsTableHeader}
                 listData={topProducts}
-                check={true}
+                check
               />
             </div>
             <div className='top-countries mt-4'>

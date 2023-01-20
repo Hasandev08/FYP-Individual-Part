@@ -1,26 +1,17 @@
 import React, { useState } from 'react'
 
 import ReportTables from '../../components/common/ReportTables'
-import Pagination from '../../components/Pagination'
 import SearchBar from '../../components/common/SearchBar'
-
+import Sidebar from '../../components/SideBar'
 import { productData, productHeader } from '../../config/productData'
+
+import { useNavigate } from 'react-router-dom'
 
 import './style.css'
 
 function Products() {
+  const navigate = useNavigate()
   const [filterProductData, setFilterProductData] = useState(productData)
-  const [page, setPage] = useState(0)
-  const [rowsPerPage, setRowsPerPage] = useState(5)
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage)
-  }
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10))
-    setPage(0)
-  }
 
   const handleChange = (val) => {
     const filteredData = productData.filter(
@@ -37,12 +28,31 @@ function Products() {
   }
 
   return (
-    <div className='products d-flex flex-column'>
-      <div className='products-search my-4'>
-        <SearchBar handleChange={handleChange} />
+    <div className='screen d-flex'>
+      <div className='common-sidebar'>
+        <Sidebar />
       </div>
-      <div className='products-report mx-5'>
-        <ReportTables check listData={filterProductData} productCheck tableHeader={productHeader} />
+      <div className='products d-flex flex-column'>
+        <div className='products-search my-4'>
+          <SearchBar handleChange={handleChange} />
+        </div>
+        <div className='add-product'>
+          <button
+            type='button'
+            className='add-product-button'
+            onClick={() => navigate('/products/add')}
+          >
+            Add
+          </button>
+        </div>
+        <div className='products-report mx-5'>
+          <ReportTables
+            check
+            listData={filterProductData}
+            productCheck
+            tableHeader={productHeader}
+          />
+        </div>
       </div>
     </div>
   )

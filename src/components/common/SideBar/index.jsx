@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import DashBoard from '../../screens/DashBoard'
-import Orders from '../../screens/Orders'
-import Products from '../../screens/Products'
-
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
 import Drawer from '@mui/material/Drawer'
@@ -16,6 +12,8 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import MenuIcon from '@mui/icons-material/Menu'
 
+import { useNavigate } from 'react-router-dom'
+
 import { menuData, otherData } from '../../config/sideBarData'
 
 import './style.css'
@@ -23,8 +21,8 @@ import './style.css'
 const drawerWidth = 220
 
 function Sidebar({ window }) {
+  const navigate = useNavigate()
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [currentPage, setCurrentPage] = useState('dashboard')
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
@@ -38,7 +36,7 @@ function Sidebar({ window }) {
         </div>
         {menuData.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton onClick={() => setCurrentPage(item.path)}>
+            <ListItemButton onClick={() => navigate(`/${item.path}`)}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText className='title' primary={item.title} />
             </ListItemButton>
@@ -51,7 +49,7 @@ function Sidebar({ window }) {
         </div>
         {otherData.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton onClick={() => setCurrentPage(item.path)}>
+            <ListItemButton onClick={() => navigate(`/${item.path}`)}>
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText className='title' primary={item.title} />
             </ListItemButton>
@@ -107,13 +105,6 @@ function Sidebar({ window }) {
         >
           {drawer}
         </Drawer>
-      </Box>
-      <Box component='main' sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
-        <div className='screens'>
-          {currentPage === 'dashboard' && <DashBoard />}
-          {currentPage === 'orders' && <Orders />}
-          {currentPage === 'products' && <Products />}
-        </div>
       </Box>
     </Box>
   )
