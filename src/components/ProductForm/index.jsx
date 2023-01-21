@@ -4,7 +4,7 @@ import { productOptions, productPrice } from '../../config/addProductData'
 
 import './style.css'
 
-function ProductFrom() {
+function ProductForm() {
   return (
     <div className='add-form'>
       <form>
@@ -46,4 +46,4 @@ function ProductFrom() {
   )
 }
 
-export default ProductFrom
+export default ProductForm

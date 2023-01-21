@@ -12,20 +12,20 @@ function Reports({ topCountries, topProducts, weekData }) {
       <div className='row'>
         <div className='weekly-revenue col-md-5 col-12 mt-4'>
           <ReportTables
-            header={'Weekly Revenue'}
-            tableHeader={revenueTableHeader}
-            listData={weekData}
             check
+            header={'Weekly Revenue'}
+            listData={weekData}
+            tableHeader={revenueTableHeader}
           />
         </div>
         <div className='top container-fluid col-md-5 col-12'>
           <div className='row'>
             <div className='top-products mt-4'>
               <ReportTables
-                header={'Top Products'}
-                tableHeader={productsTableHeader}
-                listData={topProducts}
                 check
+                header={'Top Products'}
+                listData={topProducts}
+                tableHeader={productsTableHeader}
               />
             </div>
             <div className='top-countries mt-4'>

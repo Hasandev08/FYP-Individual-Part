@@ -25,3 +25,21 @@
   font-size: 12px;
   margin: 0px;
 }
+@media screen and (max-width: 600px) {
+  .common-sidebar {
+    background-color: #f0f6f9;
+    width: 4rem !important;
+  }
+}
+@media screen and (max-width: 424px) {
+  .title-heading {
+    font-size: 14px;
+  }
+  .orders-subtotal {
+    font-size: 10px;
+  }
+  .orders-table {
+    padding: 0 6rem !important;
+    margin: 0 6rem !important;
+  }
+}

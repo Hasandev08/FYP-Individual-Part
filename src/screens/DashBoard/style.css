@@ -12,3 +12,9 @@
 .time-button:hover {
   background-color: #0360a3;
 }
+@media screen and (max-width: 600px) {
+  .common-sidebar {
+    background-color: #f0f6f9;
+    width: 4rem !important;
+  }
+}

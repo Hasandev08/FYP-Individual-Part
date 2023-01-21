@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import ReportTables from '../../components/common/ReportTables'
 import SearchBar from '../../components/common/SearchBar'
-import Sidebar from '../../components/SideBar'
+import Sidebar from '../../components/common/SideBar'
 import { productData, productHeader } from '../../config/productData'
 
 import { useNavigate } from 'react-router-dom'
@@ -40,12 +40,12 @@ function Products() {
           <button
             type='button'
             className='add-product-button'
-            onClick={() => navigate('/products/add')}
+            onClick={() => navigate('/store/add')}
           >
             Add
           </button>
         </div>
-        <div className='products-report mx-5'>
+        <div className='products-report'>
           <ReportTables
             check
             listData={filterProductData}

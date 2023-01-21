@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 
 import { useNavigate } from 'react-router-dom'
 
-import { menuData, otherData } from '../../config/sideBarData'
+import { menuData, otherData } from '../../../config/sideBarData'
 
 import './style.css'
 

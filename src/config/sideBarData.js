@@ -14,8 +14,8 @@ export const menuData = [
     path: '',
   },
   {
-    title: 'Products',
-    path: 'products',
+    title: 'Store',
+    path: 'store',
   },
   {
     title: 'Return',

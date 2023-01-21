@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import SearchBar from '../../components/common/SearchBar'
-import Sidebar from '../../components/SideBar'
+import Sidebar from '../../components/common/SideBar'
 import Table from '../../components/Table'
 
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
@@ -71,7 +71,7 @@ function Orders() {
             </div>
           </div>
         </div>
-        <div className='table'>
+        <div className='orders-table'>
           <Table headCells={headCells} filterTableData={filterTableData} />
         </div>
       </div>

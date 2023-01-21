@@ -18,7 +18,7 @@
 }
 .navbar {
   background-color: #f0f6f9;
-  padding-bottom: 200% !important;
+  width: 100% !important;
 }
 .screens {
   background-color: #fdfdfd;
