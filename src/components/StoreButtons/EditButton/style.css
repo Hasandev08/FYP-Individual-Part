@@ -1,0 +1,14 @@
+.store-edit-button {
+  background-color: #ffffff;
+  border: 1px solid #4caf50;
+  border-radius: 6px;
+  color: #4caf50;
+  font-size: 12px;
+  height: 2rem;
+  width: 3.5rem;
+}
+.store-edit-button:hover {
+  background-color: #4caf50;
+  border: none;
+  color: #ffffff;
+}

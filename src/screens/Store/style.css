@@ -4,35 +4,40 @@
 .products-search {
   margin-left: 1.5rem !important;
 }
+.products-store {
+  margin-left: 2.5rem;
+}
 .products-report {
   background-color: #ffffff;
   border-radius: 35px;
   box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
-  margin-left: 2.5rem;
   padding: 0px 0px 2rem !important;
   width: 88%;
+}
+.add-product {
+  width: 80% !important;
 }
 .add-product-button {
   background-color: #0095ff;
   border: none;
-  border-radius: 12px;
+  border-radius: 7px;
   color: white;
   height: 2rem;
   font-size: 12px;
-  margin: 0 0 1rem 1.5rem !important;
+  margin: 0 0 1rem 2rem !important;
   width: 3.5rem;
 }
 .add-product-button:hover {
   background-color: #006dbc;
 }
-@media screen and (min-width: 465px) and (max-width: 760px) {
+@media screen and (min-width: 730px) and (max-width: 960px) {
   .products-report {
-    padding: 0 2.5rem 0 0 !important;
+    padding: 0 3rem 0 0 !important;
   }
 }
-@media screen and (max-width: 465px) {
+@media screen and (max-width: 730px) {
   .products-report {
-    padding: 0 30rem 0 0 !important;
+    padding: 0 41rem 0 0 !important;
   }
 }
 @media screen and (max-width: 600px) {

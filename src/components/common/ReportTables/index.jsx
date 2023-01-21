@@ -1,5 +1,8 @@
 import React from 'react'
 
+import DeleteButton from '../../StoreButtons/DeleteButton'
+import EditButton from '../../StoreButtons/EditButton'
+
 import './style.css'
 
 function ReportTables({ check, header, listData, productCheck, tableHeader }) {
@@ -16,6 +19,8 @@ function ReportTables({ check, header, listData, productCheck, tableHeader }) {
                     {item.title}
                   </th>
                 ))}
+                {productCheck && <th></th>}
+                {productCheck && <th></th>}
               </tr>
             )}
           </thead>
@@ -32,6 +37,16 @@ function ReportTables({ check, header, listData, productCheck, tableHeader }) {
                 {productCheck && <td>$ {item.s_price}</td>}
                 {productCheck && <td>{item.size}</td>}
                 {productCheck && <td>{item.company_name}</td>}
+                {productCheck && (
+                  <td>
+                    <EditButton />
+                  </td>
+                )}
+                {productCheck && (
+                  <td>
+                    <DeleteButton />
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>

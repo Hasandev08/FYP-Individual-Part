@@ -1,0 +1,14 @@
+.store-delete-button {
+  background-color: #ffffff;
+  border: 1px solid #d11a2a;
+  border-radius: 6px;
+  color: #d11a2a;
+  font-size: 12px;
+  height: 2rem;
+  width: 3.5rem;
+}
+.store-delete-button:hover {
+  background-color: #d11a2a;
+  border: none;
+  color: #ffffff;
+}

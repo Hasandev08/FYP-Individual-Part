@@ -1,0 +1,37 @@
+.toggle {
+  height: 30px;
+  width: 52px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0f6f9;
+  position: relative;
+  margin: 3px 30px auto auto;
+  cursor: pointer;
+}
+.toggled-left {
+  height: 30px;
+  width: 52px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0f6f9;
+  position: relative;
+  margin: 3px 30px auto auto;
+  cursor: pointer;
+}
+.notch {
+  height: 26px;
+  width: 25px;
+  border-radius: 8px;
+  background-color: #0095ff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transform: translateX(23px);
+  transition: all 0.3s ease;
+}
+.toggled-left > .notch {
+  transform: translateX(0px);
+}
+.icon {
+  padding: 0px 2px;
+}

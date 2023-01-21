@@ -7,6 +7,8 @@ export const productData = [
     s_price: 1500,
     size: '105-SM-SL',
     company_name: 'adidas',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
   {
     p_id: 1202,
@@ -16,6 +18,8 @@ export const productData = [
     s_price: 1500,
     size: '105-SM-SL',
     company_name: 'adidas',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
   {
     p_id: 1203,
@@ -25,6 +29,8 @@ export const productData = [
     s_price: 1500,
     size: '105-SM-SL',
     company_name: 'adidas',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
   {
     p_id: 1204,
@@ -34,6 +40,8 @@ export const productData = [
     s_price: 1500,
     size: '105-SM-SL',
     company_name: 'adidas',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
   {
     p_id: 1205,
@@ -43,6 +51,8 @@ export const productData = [
     s_price: 1500,
     size: '105-SM-SL',
     company_name: 'adidas',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
   {
     p_id: 1206,
@@ -52,6 +62,8 @@ export const productData = [
     s_price: 1500,
     size: '105-SM-SL',
     company_name: 'adidas',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
   {
     p_id: 1207,
@@ -61,6 +73,8 @@ export const productData = [
     s_price: 1500,
     size: '105-SM-SL',
     company_name: 'adidas',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
 ]
 

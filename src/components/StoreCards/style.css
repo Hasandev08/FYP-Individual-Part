@@ -1,0 +1,18 @@
+.card {
+  border-radius: 15px !important;
+  margin: 1rem 2rem 1rem 1rem;
+  width: 15rem;
+}
+.image-example {
+  background-color: #cccccc;
+  border-radius: 15px 15px 0 0;
+  height: 12rem;
+  width: 100%;
+}
+.card-title {
+  font-size: 16px;
+}
+.card-text {
+  color: #808080;
+  font-size: 12px;
+}
