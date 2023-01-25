@@ -5,6 +5,7 @@ import SearchBar from '../../components/common/SearchBar'
 import Sidebar from '../../components/common/SideBar'
 import StoreCards from '../../components/StoreCards'
 import ToggleButton from '../../components/ToggleButton'
+
 import { productData, productHeader } from '../../config/productData'
 
 import { useNavigate } from 'react-router-dom'

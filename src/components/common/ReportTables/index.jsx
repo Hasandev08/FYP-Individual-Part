@@ -33,7 +33,7 @@ function ReportTables({ check, header, listData, productCheck, tableHeader }) {
                 {productCheck && <td>{item.p_id}</td>}
                 {productCheck && <td>{item.product_name}</td>}
                 {productCheck && <td>{item.quantity}</td>}
-                {productCheck && <td>$ {item.p_price}</td>}
+                {productCheck && <td>$ {item.r_price}</td>}
                 {productCheck && <td>$ {item.s_price}</td>}
                 {productCheck && <td>{item.size}</td>}
                 {productCheck && <td>{item.company_name}</td>}
