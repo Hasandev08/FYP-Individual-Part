@@ -1,0 +1,60 @@
+.account {
+  margin: 1.5rem 0 0 2rem;
+  width: 100%;
+}
+.account-welcome {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.profile-pic {
+  background-color: #c4c4c4;
+  border-radius: 12px;
+  height: 12rem;
+  margin-right: 2rem !important;
+  width: 10rem;
+}
+.account-body {
+  width: 100% !important;
+}
+.account-body-right {
+  width: 100% !important;
+}
+.account-body-right .form-label {
+  font-size: 12px;
+}
+.account-body-right .form-control {
+  width: 80% !important;
+}
+.account-form-labels {
+  font-size: 14px;
+}
+.form1 {
+  width: 45% !important;
+}
+.form2 {
+  width: 45% !important;
+}
+@media screen and (max-width: 769px) {
+  .account-body-right .form-control {
+    width: 120% !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .account {
+    margin: 0 !important;
+  }
+  .account-welcome {
+    margin: 2rem;
+  }
+  .account-body {
+    align-items: center;
+  }
+  .account-forms {
+    align-items: center;
+    margin-left: 0px;
+  }
+  .profile-pic {
+    height: 8rem;
+    width: 7rem;
+  }
+}

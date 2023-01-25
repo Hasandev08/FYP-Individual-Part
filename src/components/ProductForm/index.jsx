@@ -14,7 +14,7 @@ function ProductForm() {
           type='text'
           placeholder='Product Name'
           aria-label='default input example'
-        ></input>
+        />
         {productOptions.map((item, index) => (
           <div key={index.toString()}>
             <label className='add-form-heading'>{item.label}</label>
@@ -34,12 +34,12 @@ function ProductForm() {
               type='number'
               placeholder='Price'
               aria-label='default input example'
-            ></input>
+            />
           </div>
         ))}
         <label className='add-form-heading'>Product Description</label>
         <div className='mb-3'>
-          <textarea className='form-control' id='exampleFormControlTextarea1' rows='5'></textarea>
+          <textarea className='form-control' id='exampleFormControlTextarea1' rows='5' />
         </div>
       </form>
     </div>

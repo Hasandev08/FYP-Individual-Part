@@ -1,7 +1,6 @@
 import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone'
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
-import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
 import ReportOutlinedIcon from '@mui/icons-material/ReportOutlined'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
@@ -18,18 +17,9 @@ export const menuData = [
     path: 'store',
   },
   {
-    title: 'Return',
-    path: 'return',
-  },
-  {
     title: 'Order',
     icon: <ShoppingCartOutlinedIcon />,
     path: 'orders',
-  },
-  {
-    title: 'Review',
-    icon: <PeopleOutlinedIcon />,
-    path: 'review',
   },
   {
     title: 'Payment',

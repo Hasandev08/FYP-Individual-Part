@@ -1,3 +1,4 @@
+import Account from './screens/Account'
 import AddProduct from './screens/AddProduct'
 import DashBoard from './screens/DashBoard'
 import Orders from './screens/Orders'
@@ -11,6 +12,7 @@ function Routing() {
     <div className='App'>
       <BrowserRouter>
         <Routes>
+          <Route path='/account' exact element={<Account />}></Route>
           <Route path='/payment' exact element={<Payments />}></Route>
           <Route path='/orders' exact element={<Orders />} />
           <Route path='/store/add' exact element={<AddProduct />} />
