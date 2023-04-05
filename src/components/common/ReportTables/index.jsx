@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 import './style.css'
 
-function ReportTables({ check, header, listData, productCheck, tableHeader }) {
+function ReportTables({ check, header, listData, productCheck, tableHeader, paymentCheck }) {
   const navigate = useNavigate()
 
   return (
@@ -23,24 +23,26 @@ function ReportTables({ check, header, listData, productCheck, tableHeader }) {
                     {item.title}
                   </th>
                 ))}
-                {productCheck && <th></th>}
-                {productCheck && <th></th>}
+                {(productCheck || !paymentCheck) && <th></th>}
+                {(productCheck || !paymentCheck) && <th></th>}
               </tr>
             )}
           </thead>
           <tbody>
             {listData.map((item, index) => (
               <tr key={index.toString()}>
-                {check && !productCheck && <th scope='row'>{item.id}</th>}
-                {!productCheck && <td>{item.name}</td>}
-                {!productCheck && <td>{item.sale}</td>}
-                {productCheck && <td>{item.p_id}</td>}
+                {check && !productCheck && !paymentCheck && <th scope='row'>{item.id}</th>}
+                {!productCheck && !paymentCheck && <td>{item.name}</td>}
+                {!productCheck && !paymentCheck && <td>{item.sale}</td>}
+                {(productCheck || paymentCheck) && <td>{item.p_id}</td>}
+                {paymentCheck && <td>{item.payment_name}</td>}
                 {productCheck && <td>{item.product_name}</td>}
                 {productCheck && <td>{item.quantity}</td>}
-                {productCheck && <td>$ {item.r_price}</td>}
-                {productCheck && <td>$ {item.s_price}</td>}
+                {(productCheck || paymentCheck) && <td>$ {item.r_price}</td>}
+                {(productCheck || paymentCheck) && <td>$ {item.s_price}</td>}
                 {productCheck && <td>{item.size}</td>}
                 {productCheck && <td>{item.company_name}</td>}
+                {paymentCheck && <td>{item.date}</td>}
                 {productCheck && (
                   <td>
                     <EditButton handleClick={() => navigate('/store/edit')} />

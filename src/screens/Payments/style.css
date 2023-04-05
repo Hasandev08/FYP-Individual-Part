@@ -1,0 +1,16 @@
+.payments {
+  width: 100%;
+}
+.payments-report {
+  background-color: #ffffff;
+  border-radius: 35px;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
+  padding: 0px 0px 2rem !important;
+  width: 70%;
+}
+.payments-search {
+  margin-left: 1.5rem !important;
+}
+.payments-store {
+  margin-left: 2.5rem;
+}
