@@ -1,10 +1,11 @@
+import ApprovalOutlinedIcon from '@mui/icons-material/ApprovalOutlined'
 import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone'
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
-import ReportOutlinedIcon from '@mui/icons-material/ReportOutlined'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import StoreOutlinedIcon from '@mui/icons-material/StoreOutlined'
 
 export const menuData = [
   {
@@ -14,6 +15,7 @@ export const menuData = [
   },
   {
     title: 'Store',
+    icon: <StoreOutlinedIcon />,
     path: 'store',
   },
   {
@@ -26,6 +28,11 @@ export const menuData = [
     icon: <CalendarMonthTwoToneIcon />,
     path: 'payment',
   },
+  {
+    title: 'Approvals',
+    icon: <ApprovalOutlinedIcon />,
+    path: 'approval',
+  },
 ]
 
 export const otherData = [
@@ -35,14 +42,9 @@ export const otherData = [
     path: 'account',
   },
   {
-    title: 'Store Settings',
+    title: 'Settings',
     icon: <SettingsOutlinedIcon />,
     path: 'setting',
-  },
-  {
-    title: 'Help Center',
-    icon: <ReportOutlinedIcon />,
-    path: 'help',
   },
   {
     title: 'Log Out',

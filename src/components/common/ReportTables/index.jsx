@@ -3,9 +3,13 @@ import React from 'react'
 import DeleteButton from '../../StoreButtons/DeleteButton'
 import EditButton from '../../StoreButtons/EditButton'
 
+import { useNavigate } from 'react-router-dom'
+
 import './style.css'
 
 function ReportTables({ check, header, listData, productCheck, tableHeader }) {
+  const navigate = useNavigate()
+
   return (
     <div>
       {header && <p className='header'>{header}</p>}
@@ -39,7 +43,7 @@ function ReportTables({ check, header, listData, productCheck, tableHeader }) {
                 {productCheck && <td>{item.company_name}</td>}
                 {productCheck && (
                   <td>
-                    <EditButton />
+                    <EditButton handleClick={() => navigate('/store/edit')} />
                   </td>
                 )}
                 {productCheck && (

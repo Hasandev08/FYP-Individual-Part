@@ -20,12 +20,7 @@ function Store() {
   const handleChange = (val) => {
     const filteredData = productData.filter(
       (item) =>
-        item.p_id.toString().includes(val.toString()) ||
         item.product_name.toLowerCase().includes(val.toLowerCase()) ||
-        item.quantity.toString().includes(val.toString()) ||
-        item.p_price.toString().includes(val.toString()) ||
-        item.s_price.toString().includes(val.toString()) ||
-        item.size.toLowerCase().includes(val.toLowerCase()) ||
         item.company_name.toLowerCase().includes(val.toLowerCase())
     )
     setFilterProductData(filteredData)

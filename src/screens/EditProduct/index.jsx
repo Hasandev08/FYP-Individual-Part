@@ -5,7 +5,7 @@ import Sidebar from '../../components/common/SideBar'
 
 import './style.css'
 
-function AddProduct() {
+function EditProduct() {
   const imageHandler = (e) => {
     const tempArr = []
     tempArr.push(e.target.files)
@@ -16,15 +16,15 @@ function AddProduct() {
       <div className='common-sidebar'>
         <Sidebar />
       </div>
-      <div className='add-product'>
-        <h5 className='add-product-heading mt-4'>Add Product</h5>
-        <div className='add-product-form container-fluid'>
+      <div className='edit-product'>
+        <h5 className='edit-product-heading mt-4'>Edit Product</h5>
+        <div className='edit-product-form container-fluid'>
           <div className='row'>
-            <div className='add-form-left col-md-5 col-12'>
+            <div className='edit-form-left col-md-5 col-12'>
               <ProductForm />
             </div>
-            <div className='add-form-right col-md-7 col-12 d-flex flex-column mb-3'>
-              <p className='add-form-images mb-2'>Add Images</p>
+            <div className='edit-form-right col-md-7 col-12 d-flex flex-column mb-3'>
+              <p className='edit-form-images mb-2'>Edit Images</p>
               <div className='image-background container-fluid'>
                 <div className='row'>
                   <div className='browse-image col-md-5 d-flex justify-content-center align-items-center'>
@@ -42,13 +42,13 @@ function AddProduct() {
               </div>
               <div className='images-para my-2'>
                 <p className='images-rule'>
-                  You need to add at least 4 images. Pay attention to the quality of the pictures to
-                  add, comply with the background color standard. Notice that the product must show
-                  all the details
+                  You need to edit at least 4 images. Pay attention to the quality of the pictures
+                  to edit, comply with the background color standard. Notice that the product must
+                  show all the details
                 </p>
               </div>
               <div className='product-sizes'>
-                <label className='add-sizes mb-1'>Add Sizes</label>
+                <label className='edit-sizes mb-1'>Edit Sizes</label>
                 <select
                   className='form-select'
                   id='form-select-image'
@@ -60,7 +60,7 @@ function AddProduct() {
                 </select>
               </div>
               <div className='post-product-buttons mt-3'>
-                <button className='post-button'>Add Product</button>
+                <button className='post-button'>Edit Product</button>
               </div>
             </div>
           </div>
@@ -70,4 +70,4 @@ function AddProduct() {
   )
 }
 
-export default AddProduct
+export default EditProduct

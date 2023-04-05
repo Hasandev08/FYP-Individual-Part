@@ -2,8 +2,12 @@ import React from 'react'
 
 import './style.css'
 
-function EditButton() {
-  return <button className='store-edit-button'>Edit</button>
+function EditButton({ handleClick }) {
+  return (
+    <button className='store-edit-button' onClick={handleClick}>
+      Edit
+    </button>
+  )
 }
 
 export default EditButton

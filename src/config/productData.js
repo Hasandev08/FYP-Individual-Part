@@ -17,7 +17,7 @@ export const productData = [
     r_price: 1500,
     s_price: 1500,
     size: '105-SM-SL',
-    company_name: 'adidas',
+    company_name: 'Puma',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
@@ -28,7 +28,7 @@ export const productData = [
     r_price: 1500,
     s_price: 1500,
     size: '105-SM-SL',
-    company_name: 'adidas',
+    company_name: 'Nike',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
@@ -39,7 +39,7 @@ export const productData = [
     r_price: 1500,
     s_price: 1500,
     size: '105-SM-SL',
-    company_name: 'adidas',
+    company_name: 'Nike',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
   },
