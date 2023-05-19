@@ -1,0 +1,12 @@
+.tick-icon {
+  border: 1px solid green;
+  border-radius: 25px;
+  color: green;
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+}
+.tick-icon:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}

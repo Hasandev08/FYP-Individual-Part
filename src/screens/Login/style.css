@@ -1,0 +1,57 @@
+.back {
+  background-color: #314e52;
+  height: 100% !important;
+}
+
+.btn-outline-success {
+  --bs-btn-color: #e7e6e1 !important;
+  --bs-btn-border-color: #f2a154 !important;
+  --bs-btn-hover-color: #f2a154 !important;
+  --bs-btn-hover-bg: transparent !important;
+  --bs-btn-hover-border-color: #f2a154 !important;
+  --bs-btn-active-color: #e7e6e1 !important;
+  --bs-btn-active-bg: #f2a154 !important;
+  --bs-btn-active-border-color: #f2a154 !important;
+}
+
+.btn {
+  --bs-btn-font-size: 0.9rem !important;
+  --bs-btn-border-width: 3px !important;
+}
+
+.container {
+  overflow: hidden;
+  height: 87vh !important;
+  width: 50vw !important;
+  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 5%;
+}
+
+.main-text {
+  overflow: hidden;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sub-text {
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.css-11yukd5-MuiTabs-indicator {
+  background-color: #f2a154 !important;
+}
+
+.css-1a4cg4j-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #f2a154 !important;
+}
+
+.login-label {
+  color: #e7e6e1;
+  font-weight: 500;
+}
+
+.input-group-text {
+  padding: 0.03rem 0.4rem !important;
+}

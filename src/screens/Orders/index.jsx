@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
+import OrderTable from '../../components/Tables/OrderTable'
 import SearchBar from '../../components/common/SearchBar'
 import Sidebar from '../../components/common/SideBar'
-import Table from '../../components/Table'
 
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
@@ -72,7 +72,7 @@ function Orders() {
           </div>
         </div>
         <div className='orders-table'>
-          <Table headCells={headCells} filterTableData={filterTableData} />
+          <OrderTable headCells={headCells} filterTableData={filterTableData} />
         </div>
       </div>
     </div>

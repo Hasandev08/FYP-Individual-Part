@@ -1,0 +1,10 @@
+.status-complete {
+  color: #75b3bb;
+  margin: 0px !important;
+  font-weight: bold;
+}
+.status-preparing {
+  color: red;
+  margin: 0px !important;
+  font-weight: bold;
+}

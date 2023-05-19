@@ -1,9 +1,8 @@
 import ApprovalOutlinedIcon from '@mui/icons-material/ApprovalOutlined'
-import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone'
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded'
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
+import RestoreIcon from '@mui/icons-material/Restore'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import StoreOutlinedIcon from '@mui/icons-material/StoreOutlined'
 
@@ -24,14 +23,14 @@ export const menuData = [
     path: 'orders',
   },
   {
-    title: 'Payment',
-    icon: <CalendarMonthTwoToneIcon />,
-    path: 'payment',
-  },
-  {
     title: 'Approvals',
     icon: <ApprovalOutlinedIcon />,
-    path: 'approval',
+    path: 'approvals',
+  },
+  {
+    title: 'Return',
+    icon: <RestoreIcon />,
+    path: 'return',
   },
 ]
 
@@ -40,11 +39,6 @@ export const otherData = [
     title: 'Account',
     icon: <PersonOutlinedIcon />,
     path: 'account',
-  },
-  {
-    title: 'Settings',
-    icon: <SettingsOutlinedIcon />,
-    path: 'setting',
   },
   {
     title: 'Log Out',

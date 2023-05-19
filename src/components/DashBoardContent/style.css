@@ -1,0 +1,21 @@
+.reports {
+  margin: 0 0 1rem 1rem !important;
+}
+.weekly-revenue {
+  background-color: #ffffff;
+  border-radius: 35px;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
+  padding: 0px !important;
+}
+.top-products {
+  background-color: #ffffff;
+  border-radius: 35px;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
+  padding: 0px 0px 2rem !important;
+}
+.top-countries {
+  background-color: #ffffff;
+  border-radius: 35px;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
+  padding: 0px 0px 2rem !important;
+}

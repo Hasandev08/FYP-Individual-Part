@@ -1,0 +1,34 @@
+.table thead tr th {
+  color: #808080;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1rem;
+}
+.table tbody tr th {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1rem;
+}
+.table tbody tr:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+.table tbody tr td {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 1rem;
+}
+@media screen and (max-width: 475px) {
+  .table thead tr th {
+    font-size: 6px !important;
+    padding: 0.5rem !important;
+  }
+  .table tbody tr th {
+    font-size: 6px !important;
+    padding: 0.5rem !important;
+  }
+  .table tbody tr td {
+    font-size: 6px !important;
+    padding: 0.5rem !important;
+  }
+}

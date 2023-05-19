@@ -38,22 +38,27 @@ export const weekData = [
 
 export const countries = [
   {
+    id: 1,
     name: 'Lahore',
     sale: 5446,
   },
   {
+    id: 2,
     name: 'Sialkot',
     sale: 8926,
   },
   {
+    id: 3,
     name: 'Karachi',
     sale: 7506,
   },
   {
+    id: 4,
     name: 'Multan',
     sale: 2350,
   },
   {
+    id: 5,
     name: 'Sargodha',
     sale: 3567,
   },

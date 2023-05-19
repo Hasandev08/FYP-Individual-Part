@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Cards from '../../components/Cards'
-import Reports from '../../components/Reports'
+import DashBoardContent from '../../components/DashBoardContent'
 import Sidebar from '../../components/common/SideBar'
 
 import { countries, products, weekData } from '../../config/dashboardData'
@@ -77,7 +77,11 @@ function DashBoard() {
           <Cards revenue={revenue} />
         </div>
         <div className='dashboard-reports'>
-          <Reports topCountries={topCountries} topProducts={topProducts} weekData={weekData} />
+          <DashBoardContent
+            topCountries={topCountries}
+            topProducts={topProducts}
+            weekData={weekData}
+          />
         </div>
       </div>
     </div>

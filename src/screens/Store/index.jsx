@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-import ReportTables from '../../components/common/ReportTables'
 import SearchBar from '../../components/common/SearchBar'
 import Sidebar from '../../components/common/SideBar'
 import StoreCards from '../../components/StoreCards'
+import StoreTable from '../../components/Tables/StoreTable'
 import ToggleButton from '../../components/ToggleButton'
 
 import { productData, productHeader } from '../../config/productData'
@@ -54,12 +54,7 @@ function Store() {
         <div className='products-store'>
           {!toggled ? (
             <div className='products-report'>
-              <ReportTables
-                check
-                listData={filterProductData}
-                productCheck
-                tableHeader={productHeader}
-              />
+              <StoreTable listData={filterProductData} tableHeader={productHeader} />
             </div>
           ) : (
             <div className='products-cards'>

@@ -1,0 +1,18 @@
+.approvals-search {
+  margin-left: 1.5rem !important;
+}
+.approvals-table {
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, 0.5);
+  margin-left: 2.5rem !important;
+  padding: 0px 0px 2rem !important;
+  width: 80% !important;
+}
+@media screen and (max-width: 800px) {
+  .approvals-table {
+    margin-left: 1rem !important;
+    overflow: hidden;
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,12 @@
+.cross-icon {
+  border: 1px solid red;
+  border-radius: 25px;
+  color: red;
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+}
+.cross-icon:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
