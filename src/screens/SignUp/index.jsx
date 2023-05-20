@@ -77,7 +77,7 @@ const SignUp = () => {
         </div>
         <div className='col-sm-2 offset-sm-4 col-3 offset-3 text-end'>
           <button
-            class='btn btn-outline-success py-0 py-sm-1 py-md-2 px-1 px-sm-2 px-md-3 px-lg-4'
+            className='btn btn-outline-success py-0 py-sm-1 py-md-2 px-1 px-sm-2 px-md-3 px-lg-4'
             type='button'
             onClick={() => navigate('/')}
           >

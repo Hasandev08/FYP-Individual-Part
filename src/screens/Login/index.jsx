@@ -1,13 +1,9 @@
 import React, { useState } from 'react'
-
-import VisibilityIcon from '@mui/icons-material/Visibility'
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-
-import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 import logo from '../../assets/logo.png'
 
-import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 import './style.css'
 
@@ -16,15 +12,15 @@ const loginState = {
   password: '',
 }
 
-const Login = () => {
+const Login = ({ setToken }) => {
   const navigate = useNavigate()
   const [loginData, setLoginData] = useState(loginState)
-  const [showPassword, setShowPassword] = useState(false)
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     axios
       .post(
-        'https://f25e-119-160-98-57.ngrok-free.app/api/auth/login',
+        `https://4980-119-160-98-57.ngrok-free.app/api/auth/login`,
         {
           username: loginData.email,
           password: loginData.password,
@@ -37,23 +33,14 @@ const Login = () => {
       )
       .then((response) => {
         console.log(response.data)
-        localStorage.setItem('data', response.data)
+        localStorage.setItem('token', response.data)
+        setToken(response.data.accessToken)
+        console.log('token', response.data.accessToken)
         navigate('/dashboard')
       })
       .catch((error) => {
         console.error(error)
       })
-  }
-
-  const handleShowPassword = () => {
-    var id = document.getElementById('Password')
-    if (id.type === 'password') {
-      setShowPassword(true)
-      id.type = 'text'
-    } else {
-      setShowPassword(false)
-      id.type = 'password'
-    }
   }
 
   return (
@@ -64,7 +51,7 @@ const Login = () => {
         </div>
         <div className='col-sm-2 offset-sm-4 col-3 offset-3 text-end'>
           <button
-            class='btn btn-outline-success py-0 py-sm-1 py-md-2 px-1 px-sm-2 px-md-3 px-lg-4'
+            className='btn btn-outline-success py-0 py-sm-1 py-md-2 px-1 px-sm-2 px-md-3 px-lg-4'
             type='button'
             onClick={() => navigate('/signup')}
           >
@@ -90,32 +77,20 @@ const Login = () => {
                 id='loginEmail'
                 className='login-input'
                 placeholder='Email Address'
-                required
                 value={loginData.email}
                 onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
               />
             </div>
             <div className='mb-4 d-flex form-control'>
               <input
+                autoComplete='on'
                 type='password'
                 id='Password'
                 className='login-input'
                 placeholder='Password'
-                required
                 value={loginData.password}
                 onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
               />
-              <span>
-                {showPassword ? (
-                  <button onClick={handleShowPassword} className='show-password-button'>
-                    <VisibilityOffIcon />
-                  </button>
-                ) : (
-                  <button onClick={handleShowPassword} className='show-password-button'>
-                    <VisibilityIcon />
-                  </button>
-                )}
-              </span>
             </div>
             <div className='login-button'>
               <button type='submit' className='login-subButton' onClick={handleSubmit}>

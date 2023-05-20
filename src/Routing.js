@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Account from './screens/Account'
 import AddProduct from './screens/AddProduct'
 import Approvals from './screens/Approvals'
@@ -13,6 +14,9 @@ import Store from './screens/Store'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function Routing() {
+  const [token, setToken] = useState(localStorage.getItem('token'))
+  console.log('token', token)
+
   return (
     <div className='App'>
       <BrowserRouter>
@@ -23,7 +27,7 @@ function Routing() {
           <Route path='/approvals/:id' exact element={<Customer />} />
           <Route path='/dashboard' exact element={<DashBoard />} />
           <Route path='/store/edit' exact element={<EditProduct />} />
-          <Route path='/' exact element={<Login />} />
+          <Route path='/' exact element={<Login setToken={setToken} />} />
           <Route path='/signup' exact element={<SignUp />} />
           <Route path='/orders' exact element={<Orders />} />
           <Route path='/return' exact element={<Return />} />
