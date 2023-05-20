@@ -4,9 +4,10 @@ import Approvals from './screens/Approvals'
 import Customer from './screens/Customer'
 import DashBoard from './screens/DashBoard'
 import EditProduct from './screens/EditProduct'
-import Login from './screens/Login/Login'
+import Login from './screens/Login'
 import Orders from './screens/Orders'
 import Return from './screens/Return'
+import SignUp from './screens/SignUp'
 import Store from './screens/Store'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -23,6 +24,7 @@ function Routing() {
           <Route path='/dashboard' exact element={<DashBoard />} />
           <Route path='/store/edit' exact element={<EditProduct />} />
           <Route path='/' exact element={<Login />} />
+          <Route path='/signup' exact element={<SignUp />} />
           <Route path='/orders' exact element={<Orders />} />
           <Route path='/return' exact element={<Return />} />
           <Route path='/store' exact element={<Store />} />

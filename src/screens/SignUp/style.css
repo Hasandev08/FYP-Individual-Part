@@ -1,13 +1,13 @@
-.login-page {
+.signup-page {
   background-color: #314e52;
   height: 100%;
   padding-bottom: 3rem;
   width: 100vw;
 }
-.container {
+.signup-container {
   background-color: rgb(255, 255, 255, 0.4);
   border-radius: 2rem;
-  height: 30rem;
+  height: 50rem;
   width: 42% !important;
 }
 .main-text {
@@ -25,7 +25,7 @@
   height: 2rem !important;
   width: 70% !important;
 }
-.login-input {
+.signup-input {
   background: none;
   border: none;
   outline: none;
@@ -35,7 +35,7 @@
   background-color: #f3f3f3;
   border: none;
 }
-.login-subButton {
+.signup-subButton {
   background-color: #314e52;
   border: none;
   border-radius: 8px;
@@ -43,7 +43,7 @@
   height: 2rem;
   width: 4rem;
 }
-.login-subButton:hover {
+.signup-subButton:hover {
   background-color: #24383a;
 }
 .btn-outline-success {
@@ -61,12 +61,12 @@
   --bs-btn-border-width: 3px !important;
 }
 @media screen and (max-width: 425px) {
-  .login-page {
+  .signup-page {
     width: 120vw !important;
   }
 }
 @media screen and (max-width: 768px) {
-  .container {
+  .signup-container {
     width: 80% !important;
   }
 }
