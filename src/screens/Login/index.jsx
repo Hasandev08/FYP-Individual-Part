@@ -20,7 +20,7 @@ const Login = ({ setToken }) => {
     e.preventDefault()
     axios
       .post(
-        `https://4980-119-160-98-57.ngrok-free.app/api/auth/login`,
+        `https://063a-111-68-102-12.ngrok-free.app/api/auth/login`,
         {
           username: loginData.email,
           password: loginData.password,
@@ -32,10 +32,8 @@ const Login = ({ setToken }) => {
         }
       )
       .then((response) => {
-        console.log(response.data)
-        localStorage.setItem('token', response.data)
-        setToken(response.data.accessToken)
-        console.log('token', response.data.accessToken)
+        localStorage.setItem('token', response.data.accessToken.toString())
+        setToken(response.data.accessToken.toString())
         navigate('/dashboard')
       })
       .catch((error) => {

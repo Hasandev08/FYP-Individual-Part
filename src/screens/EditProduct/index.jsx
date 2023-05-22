@@ -47,18 +47,6 @@ function EditProduct() {
                   show all the details
                 </p>
               </div>
-              <div className='product-sizes'>
-                <label className='edit-sizes mb-1'>Edit Sizes</label>
-                <select
-                  className='form-select'
-                  id='form-select-image'
-                  aria-label='Default select example'
-                >
-                  <option selected>Small</option>
-                  <option>Medium</option>
-                  <option>Large</option>
-                </select>
-              </div>
               <div className='post-product-buttons mt-3'>
                 <button className='post-button'>Edit Product</button>
               </div>

@@ -14,24 +14,23 @@ import Store from './screens/Store'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function Routing() {
-  const [token, setToken] = useState(localStorage.getItem('token'))
-  console.log('token', token)
+  const [token, setToken] = useState()
 
   return (
     <div className='App'>
       <BrowserRouter>
         <Routes>
-          <Route path='/account' exact element={<Account />} />
-          <Route path='/store/add' exact element={<AddProduct />} />
-          <Route path='/approvals' exact element={<Approvals />} />
-          <Route path='/approvals/:id' exact element={<Customer />} />
-          <Route path='/dashboard' exact element={<DashBoard />} />
-          <Route path='/store/edit' exact element={<EditProduct />} />
+          {token && <Route path='/account' exact element={<Account />} />}
+          {token && <Route path='/store/add' exact element={<AddProduct />} />}
+          {token && <Route path='/approvals' exact element={<Approvals />} />}
+          {token && <Route path='/approvals/:id' exact element={<Customer />} />}
+          {token && <Route path='/dashboard' exact element={<DashBoard />} />}
+          {token && <Route path='/store/edit' exact element={<EditProduct />} />}
           <Route path='/' exact element={<Login setToken={setToken} />} />
           <Route path='/signup' exact element={<SignUp />} />
-          <Route path='/orders' exact element={<Orders />} />
-          <Route path='/return' exact element={<Return />} />
-          <Route path='/store' exact element={<Store />} />
+          {token && <Route path='/orders' exact element={<Orders />} />}
+          {token && <Route path='/return' exact element={<Return />} />}
+          {token && <Route path='/store' exact element={<Store />} />}
         </Routes>
       </BrowserRouter>
     </div>

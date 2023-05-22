@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 
-import VisibilityIcon from '@mui/icons-material/Visibility'
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-
 import { useNavigate } from 'react-router-dom'
 
 import logo from '../../assets/logo.png'
@@ -27,13 +24,12 @@ const initialState = {
 const SignUp = () => {
   const navigate = useNavigate()
   const [data, setData] = useState(initialState)
-  const [showPassword, setShowPassword] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     axios
       .post(
-        'https://f25e-119-160-98-57.ngrok-free.app/api/auth/registerseller',
+        'https://063a-111-68-102-12.ngrok-free.app/api/auth/registerseller',
         {
           username: data.email,
           password: data.password,
@@ -56,17 +52,6 @@ const SignUp = () => {
       .catch((error) => {
         console.error(error)
       })
-  }
-
-  const handleShowPassword = () => {
-    var id = document.getElementById('Password')
-    if (id.type === 'password') {
-      setShowPassword(true)
-      id.type = 'text'
-    } else {
-      setShowPassword(false)
-      id.type = 'password'
-    }
   }
 
   return (
@@ -140,17 +125,6 @@ const SignUp = () => {
                 value={data.password}
                 onChange={(e) => setData({ ...data, password: e.target.value })}
               />
-              <span>
-                {showPassword ? (
-                  <button onClick={handleShowPassword} className='show-password-button'>
-                    <VisibilityOffIcon />
-                  </button>
-                ) : (
-                  <button onClick={handleShowPassword} className='show-password-button'>
-                    <VisibilityIcon />
-                  </button>
-                )}
-              </span>
             </div>
             <div className='mb-4 form-control'>
               <input
